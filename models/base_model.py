@@ -2,7 +2,6 @@
 """This module defines a class named BaseModel"""
 from datetime import datetime
 import uuid
-import models
 
 
 class BaseModel:
@@ -10,7 +9,6 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """Public instantation method"""
-        from models import storage
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
@@ -28,7 +26,6 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self)
 
     def __str__(self):
         """String representation method"""
