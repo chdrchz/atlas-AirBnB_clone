@@ -35,5 +35,5 @@ class FileStorage():
                 for key, obj_dict in data.items:
                     obj = eval(obj_dict['__class__'])(**obj_dict)
                     self.__objects[key] = obj
-        except:
+        except FileNotFoundError:
             pass
