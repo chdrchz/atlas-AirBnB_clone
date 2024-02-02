@@ -2,7 +2,6 @@
 """This module defines a class named FileStorage"""
 import json
 import os
-from models.base_model import BaseModel
 
 
 class FileStorage():
@@ -29,6 +28,7 @@ class FileStorage():
 
     def reload(self):
         """This method deserializes the JSON file to __objects"""
+        from models.base_model import BaseModel
         try: 
             with open(self.__file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
