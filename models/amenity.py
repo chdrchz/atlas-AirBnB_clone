@@ -2,7 +2,7 @@
 """
 This module defines a class named Amenity that inherits from BaseModel
 """
-from base_model import BaseModel
+from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
