@@ -19,6 +19,16 @@ class FileStorage():
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         self.__objects[key] = obj
 
+    def update(self, obj, key, value):
+        """This method removes an instance and saves to json file"""
+        setattr(obj, key, value)
+        FileStorage.save(self)
+
+    def remove(self, key):
+        """This method removes instance and saves to json file"""
+        del FileStorage.__objects[key]
+        FileStorage.save(self)
+
     def save(self):
         """This method serializes __objects to the JSON file"""
         serial_objects = {}
