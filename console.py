@@ -211,8 +211,6 @@ class HBNBCommand(cmd.Cmd):
         print("Shows all objects, or all of a class")
         print("[Usage]: all <className>\n")
 
-<<<<<<< Updated upstream
-=======
     def do_update(self, args):
         """Updates an instance based on the class name and id"""
         if not args:
@@ -274,7 +272,6 @@ class HBNBCommand(cmd.Cmd):
         storage.update(obj, attribute_name, value)
         #print(storage._FileStorage__objects[key])
 
->>>>>>> Stashed changes
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
