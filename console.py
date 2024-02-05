@@ -253,9 +253,9 @@ class HBNBCommand(cmd.Cmd):
 
         new_value = arg_list[3]
 
-        if attribute_name in ["id", "created_at", "updated_at"]:
+        """if attribute_name in ["id", "created_at", "updated_at"]:
             print("** cannot update id, created_at, or updated_at **")
-            return
+            return """
         
         instance = storage.all()[key]
         attribute_type = type(getattr(instance, attribute_name, None))
