@@ -17,9 +17,9 @@ class HBNBCommand(cmd.Cmd):
               }
     dot_cmds = ['all', 'count', 'show', 'destroy', 'update']
     types = {
-             'number_rooms': int, 'number_bathrooms': int,
+             'first_name': str, 'number_rooms': int, 'number_bathrooms': int,
              'max_guest': int, 'price_by_night': int,
-             'latitude': float, 'longitude': float
+             'latitude': float, 'longitude': float, 'last_name': str, 'password': str, 'email': str
             }
 
     def preloop(self):
@@ -211,6 +211,70 @@ class HBNBCommand(cmd.Cmd):
         print("Shows all objects, or all of a class")
         print("[Usage]: all <className>\n")
 
+<<<<<<< Updated upstream
+=======
+    def do_update(self, args):
+        """Updates an instance based on the class name and id"""
+        if not args:
+            print("** class name missing **")
+            return
+        
+        arg_list = args.split()
+        class_name = arg_list[0]
+
+        if class_name not in HBNBCommand.classes:
+            print("** class doesn't exist **")
+            return
+        
+        if len(arg_list) < 2:
+            print("** instance id missing **")
+            return
+        
+        instance_id = arg_list[1]
+
+        key = class_name + "." + instance_id
+        if key not in storage.all():
+            print("** no instance found **")
+            return
+        
+        if len(arg_list) < 3:
+            print("** attribute name missing **")
+            return
+        
+        attribute_name = arg_list[2]
+
+        if len(arg_list) < 4:
+            print("** value missing **")
+            return
+
+        new_value = arg_list[3]
+
+        # Remove double quotes from the attribute value
+        new_value = new_value.strip("\"")
+     
+        instance = storage.all()[key]
+        attribute_type = type(getattr(instance, attribute_name, None))
+
+        # Ensure we're not updating a protected attribute
+        if attribute_name in ["id", "created_at", "updated_at"]:
+            return
+
+        # Convert attribute value to the correct type if needed
+        try:
+            if "." in new_value:  # This could be a float
+                value = float(new_value)
+            else:
+                value = int(new_value)
+        except ValueError:
+            value = new_value  # Just a string
+       
+        #  `key` is your unique identifier for the object
+        obj = storage._FileStorage__objects[key]
+        # Update the attribute directly
+        storage.update(obj, attribute_name, value)
+        #print(storage._FileStorage__objects[key])
+
+>>>>>>> Stashed changes
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
