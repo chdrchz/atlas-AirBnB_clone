@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""This module is a set of unit tests for BaseModel"""
 import unittest
 import os
 from models.engine.file_storage import FileStorage
@@ -12,6 +12,7 @@ my_model = BaseModel()
 
 class TestBaseModel(unittest.TestCase):
     """Class test BaseModel"""
+
     def test_id(self):
         """Unittest that tests id"""
         self.assertTrue(type(my_model.id) is str)
