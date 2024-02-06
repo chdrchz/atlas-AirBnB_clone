@@ -37,6 +37,7 @@
             Contains a place id, user id, and text. 
         </details>
     </details>
+    <br>
     <details><summary><p>The Console</p></summary>
         <ul>
         <li><b>def preloop(self):</b>    <em>Method that prints if isatty(is it a terminal?) is false.</em></li>
@@ -58,7 +59,7 @@
         </ul>
     </details>
     <br>
-    <h2 align="center">Usage</h2>
+    <h2>Usage</h2>
     <p><b>To get started:</b> In the user's terminal, in the subdirectory where the user would like to install the new repository, type:<p>
     <h3>Thanks for stopping by! It was a blast making this!</h3>
 </body>
