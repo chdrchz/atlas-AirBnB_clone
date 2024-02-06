@@ -11,6 +11,7 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 
+
 class HBNBCommand(cmd.Cmd):
     """ Contains the functionality for the HBNB console"""
 
@@ -21,7 +22,7 @@ class HBNBCommand(cmd.Cmd):
                'BaseModel': BaseModel,
                'User': User,
                'State': State,
-               'City': Amenity,
+               'City': City,
                'Place': Place,
                'Review': Review,
                'Amenity': Amenity
