@@ -11,6 +11,7 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 
+
 class HBNBCommand(cmd.Cmd):
     """ Contains the functionality for the HBNB console"""
 
@@ -283,6 +284,6 @@ class HBNBCommand(cmd.Cmd):
         storage.update(obj, attribute_name, value)
         #print(storage._FileStorage__objects[key])
 
-
+        
 if __name__ == "__main__":
     HBNBCommand().cmdloop()

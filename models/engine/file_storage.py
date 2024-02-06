@@ -2,6 +2,7 @@
 """This module defines a class named FileStorage"""
 import json
 import os
+from models.base_model import BaseModel
 
 
 class FileStorage():
@@ -20,6 +21,7 @@ class FileStorage():
 
     def update(self, obj, key, value):
         """This method removes an instance and saves to json file"""
+
         if not hasattr(obj, '__dict__'):
             raise ValueError("obj must be an object instance, got '{}'".format(type(obj).__name__))
         setattr(obj, key, value)
