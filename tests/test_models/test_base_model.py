@@ -6,11 +6,10 @@ from models.engine.file_storage import FileStorage
 from datetime import datetime
 from models.base_model import BaseModel
 
+my_model = BaseModel()
 
 class TestBaseModel(unittest.TestCase):
     """Class test BaseModel"""
-
-    my_model = BaseModel()
 
     def test_id(self):
         """Unittest that tests id"""
