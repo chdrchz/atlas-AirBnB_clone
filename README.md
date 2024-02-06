@@ -6,7 +6,6 @@
     <br>
     <h2>So, what's included?</h2>
     <details><summary><p>Classes</p></summary>
-        <br>
         <details><summary><em>BaseModel</em></summary>
             <ul>
             <br>
@@ -37,7 +36,6 @@
             Contains a place id, user id, and text. 
         </details>
     </details>
-    <br>
     <details><summary><p>The Console</p></summary>
         <ul>
         <li><b>def preloop(self):</b>    <em>Method that prints if isatty(is it a terminal?) is false.</em></li>
