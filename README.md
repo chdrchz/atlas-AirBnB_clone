@@ -8,10 +8,12 @@
 
 <details><summary>Classes</summary>
     <details><summary><em>BaseModel</em></summary>
-        def __init__(self, *args, **kwargs): <em>Instantaion method.</em>
-        def __str__(self): <em>Object as string representation method.</em>
-        def save(self): <em>Saves an instance with the current date and time.</em>
-        def to_dict(self): <em>Returns a dictionary of all created instances.</em> 
+        <ul>
+        <li>def __init__(self, *args, **kwargs): <em>Instantaion method.</em></li>
+        <li>def __str__(self): <em>Object as string representation method.</em></li>
+        <li>def save(self): <em>Saves an instance with the current date and time.</em></li>
+        <li>def to_dict(self): <em>Returns a dictionary of all created instances.</em></li>
+        </ul>
     </details>
     <details><summary><em>User</em></summary>
         Contains a user's email, password, first name and last name. 
