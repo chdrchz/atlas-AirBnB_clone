@@ -1,8 +1,8 @@
 <body>
-    <h1><center>The Console - An AirBnB Project</center></h1>
-    <h3><center>A custom implementation of the console for AirBnB</center></h3>
-    <p><center>Created by Allyson Ugarte and Savanna Davis</center></p>
-    <p><center>This command line interpreter is designed to offer an extensible environment for executing commands, managing tasks, and performing various operations seamlessly. Built using Python, it provides a powerful yet straightforward interface that can be easily customized and extended for specific use cases.</center></p>
+    <h1 align="center">The Console - An AirBnB Project</h1>
+    <h3 align="center">A custom implementation of the console for AirBnB</h3>
+    <p align="center">Created by Allyson Ugarte and Savanna Davis</p>
+    <p align="center">This command line interpreter is designed to offer an extensible environment for executing commands, managing tasks, and performing various operations seamlessly. Built using Python, it provides a powerful yet straightforward interface that can be easily customized and extended for specific use cases.</p>
     <br>
     <h2>So, what's in here?</h2>
     <details><summary>Classes</summary>
