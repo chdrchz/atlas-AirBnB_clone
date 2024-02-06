@@ -13,18 +13,18 @@
         def save(self): <em>Saves an instance with the current date and time.</em>
         def to_dict(self): <em>Returns a dictionary of all created instances.</em> 
     </details>
-    <details><summary><em>User</em><summary></details>
+    <details><summary><em>User</em></summary>
         Contains a user's email, password, first name and last name. 
     <details><summary><em>City</em><summary>
         Contains a state id and name.
     </details>
-    <details><summary><em>State</em><summary>
+    <details><summary><em>State</em></summary>
         Contains a name.
     </details>
-    <details><summary><em>Place</em><summary>
+    <details><summary><em>Place</em></summary>
         Contains a city id, user id, latitude, longitude, max guests, number of rooms and bathrooms.
     </details>
-    <details><summary><em>Review</em><summary>
+    <details><summary><em>Review</em></summary>
         Contains a place id, user id, and text. 
     </details>
 </details>
