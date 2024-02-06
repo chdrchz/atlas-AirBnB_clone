@@ -23,9 +23,9 @@ class HBNBCommand(cmd.Cmd):
               }
     dot_cmds = ['all', 'count', 'show', 'destroy', 'update']
     types = {
-             'number_rooms': int, 'number_bathrooms': int,
+             'first_name': str, 'number_rooms': int, 'number_bathrooms': int,
              'max_guest': int, 'price_by_night': int,
-             'latitude': float, 'longitude': float
+             'latitude': float, 'longitude': float, 'last_name': str, 'password': str, 'email': str
             }
 
     def preloop(self):
@@ -252,19 +252,32 @@ class HBNBCommand(cmd.Cmd):
             return
 
         new_value = arg_list[3]
-        
+
+        # Remove double quotes from the attribute value
+        new_value = new_value.strip("\"")
+     
         instance = storage.all()[key]
         attribute_type = type(getattr(instance, attribute_name, None))
-        
-        try:
-            new_value = attribute_type(new_value)
-        except (ValueError, TypeError):
-            print("** invalid value type for attribute **")
+
+        # Ensure we're not updating a protected attribute
+        if attribute_name in ["id", "created_at", "updated_at"]:
             return
+
+        # Convert attribute value to the correct type if needed
+        try:
+            if "." in new_value:  # This could be a float
+                value = float(new_value)
+            else:
+                value = int(new_value)
+        except ValueError:
+            value = new_value  # Just a string
+       
+        #  `key` is your unique identifier for the object
+        obj = storage._FileStorage__objects[key]
+        # Update the attribute directly
+        storage.update(obj, attribute_name, value)
+        #print(storage._FileStorage__objects[key])
+
         
-        setattr(instance, attribute_name, new_value)
-
-        storage.save()
-
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
