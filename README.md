@@ -15,7 +15,8 @@
     </details>
     <details><summary><em>User</em></summary>
         Contains a user's email, password, first name and last name. 
-    <details><summary><em>City</em><summary>
+    </details>
+    <details><summary><em>City</em></summary>
         Contains a state id and name.
     </details>
     <details><summary><em>State</em></summary>
