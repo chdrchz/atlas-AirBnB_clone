@@ -4,7 +4,7 @@
     <p align="center"><em>Created by Allyson Ugarte and Savanna Davis</em></p>
     <p align="center">This command line interpreter is designed to offer an extensible environment for executing commands, managing tasks, and performing various operations seamlessly. Built using Python, it provides a powerful yet straightforward interface that can be easily customized and extended for further use.</p>
     <br>
-    <h2>So, what's included?</h2>
+    <h3>So, what's included?</h3>
     <details><summary><p>Classes</p></summary>
         <details><summary><em>BaseModel</em></summary>
             <ul>
@@ -56,8 +56,7 @@
         <li><b>def do_update(self, args):</b>    <em>Updates an instance based on the class name and id.</em></li>
         </ul>
     </details>
-    <br>
-    <h2>Usage</h2>
+    <h3>Usage</h3>
     <p><b>To get started:</b> In the user's terminal, in the subdirectory where the user would like to install the new repository, type:<p>
     <h3>Thanks for stopping by! It was a blast making this!</h3>
 </body>
