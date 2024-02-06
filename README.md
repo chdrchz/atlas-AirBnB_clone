@@ -58,7 +58,7 @@
     </details>
     <h3>Usage</h3>
     <p><b>To get started:</b> In the user's terminal, in the subdirectory where the user would like to install the new repository, type:</p>
-    <h3>https://github.com/chdrchz/atlas-AirBnB_clone.git</h3>
+    <h3>git clone https://github.com/chdrchz/atlas-AirBnB_clone.git</h3>
     <br>
     <p align="center">Thanks for stopping by! It was a blast making this!</p>
 </body>
