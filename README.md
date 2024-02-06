@@ -2,7 +2,7 @@
     <h1 align="center">The Console - An AirBnB Project</h1>
     <h3 align="center">A custom implementation of the console for AirBnB</h3>
     <p align="center"><em>Created by Allyson Ugarte and Savanna Davis</em></p>
-    <p align="center">This command line interpreter is designed to offer an extensible environment for executing commands, managing tasks, and performing various operations seamlessly. Built using Python, it provides a powerful yet straightforward interface that can be easily customized and extended for further use.</p>
+    <p align="center">The command interpreter provides users with a set of commands to interact with the data stored in classes, enabling functionalities such as adding new places, writing reviews, querying information about specific locations, and managing user profiles. Users can navigate through different commands and options using a familiar command-line interface, making it easy to access and manipulate location-based data efficiently. Built using Python, it provides a powerful yet straightforward interface that can be easily customized and extended for further use.</p>
     <br>
     <h3>So, what's included?</h3>
     <details><summary><p>Classes</p></summary>
@@ -57,6 +57,6 @@
         </ul>
     </details>
     <h3>Usage</h3>
-    <p><b>To get started:</b> In the user's terminal, in the subdirectory where the user would like to install the new repository, type:<p>
-    <h3>Thanks for stopping by! It was a blast making this!</h3>
+    <h3><b>To get started:</b> In the user's terminal, in the subdirectory where the user would like to install the new repository, type: </h3>
+    <p align="center">Thanks for stopping by! It was a blast making this!</p>
 </body>
