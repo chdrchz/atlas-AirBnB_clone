@@ -7,23 +7,16 @@
 <p>Placeholder text</p>
 
 <details><summary>Classes</summary>
-    <details><summary>BaseModel</summary>
-    test
+    <details><summary><em>BaseModel</em></summary>
+        def __init__(self, *args, **kwargs): 
+        def __str__(self):
+        def save(self):
+        def to_dict(self):
     </details>
-    <details><summary>User</summary>
-    test
-    </details> 
-    <details><summary>City</summary>
-    test
-    </details> 
-    <details><summary>State</summary>
-    test
-    </details> 
-    <details><summary>Place</summary>
-    test
-    </details> 
-    <details><summary>Review</summary>
-    test
-    </details> 
+    <em>User</em>
+    <em>City</em>
+    <em>State</em>
+    <em>Place</em>
+    <em>Review</em>
 </details>
 
