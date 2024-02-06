@@ -20,8 +20,7 @@ class FileStorage():
         self.__objects[key] = obj
 
     def update(self, obj, key, value):
-        """This method removes an instance and saves to json file"""
-
+        """This method removes an instance and saves to json file"""     
         if not hasattr(obj, '__dict__'):
             raise ValueError("obj must be an object instance, got '{}'".format(type(obj).__name__))
         setattr(obj, key, value)
@@ -43,6 +42,13 @@ class FileStorage():
     def reload(self):
         """This method deserializes the JSON file to __objects"""
         from models.base_model import BaseModel
+        from models.__init__ import storage
+        from models.user import User
+        from models.amenity import Amenity
+        from models.city import City
+        from models.place import Place
+        from models.review import Review
+        from models.state import State
         try: 
             with open(self.__file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)

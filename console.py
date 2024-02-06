@@ -11,7 +11,6 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 
-
 class HBNBCommand(cmd.Cmd):
     """ Contains the functionality for the HBNB console"""
 
@@ -19,7 +18,13 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
 
     classes = {
-               'BaseModel': BaseModel
+               'BaseModel': BaseModel,
+               'User': User,
+               'State': State,
+               'City': Amenity,
+               'Place': Place,
+               'Review': Review,
+               'Amenity': Amenity
               }
     dot_cmds = ['all', 'count', 'show', 'destroy', 'update']
     types = {
