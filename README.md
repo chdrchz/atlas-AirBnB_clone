@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Console - An AirBnB Project</title>
-</head>
 <body>
-    <h1>The Console - An AirBnB Project</h1>
-    <br>
-    <h2>A custom implementation of the console for AirBnB</h2>
-    <h3>Created by Allyson Ugarte and Savanna Davis</h3>
+    <h1 style="text_align: center;">The Console - An AirBnB Project</h1>
+    <h3>A custom implementation of the console for AirBnB</h3>
+    <p>Created by Allyson Ugarte and Savanna Davis</p>
     <p>This command line interpreter is designed to offer an extensible environment for executing commands, managing tasks, and performing various operations seamlessly. Built using Python, it provides a powerful yet straightforward interface that can be easily customized and extended for specific use cases.</p>
     <h2>So, what's in here?</h2>
     <details><summary>Classes</summary>
