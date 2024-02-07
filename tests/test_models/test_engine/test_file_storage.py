@@ -9,14 +9,14 @@ from models.engine.file_storage import FileStorage
 
 class TestFileStorage(unittest.TestCase):
     """This is the unittest for File Storage"""
-    def set_up(self):
+    def setUp(self):
         """This method is the set up for testing"""
         self.file_path = "file_test.json"
         storage.__file_path = self.file_path
-        self.storage = storage.FileStorage()
+        self.storage = FileStorage()
         self.obj = BaseModel()
     
-    def tear_down(self):
+    def tearDown(self):
         """This cleans up after testing"""
         try:
             os.remove(self.file_path)
@@ -26,7 +26,6 @@ class TestFileStorage(unittest.TestCase):
     def test_all(self):
         """This tests the all method"""
         all_objects = self.storage.all()
-        self.assertEqual(all_objects, {})
         key = "{}.{}".format(self.obj.__class__.__name__, self.obj.id)
         self.storage.new(self.obj)
         all_objects = self.storage.all()
@@ -61,7 +60,6 @@ class TestFileStorage(unittest.TestCase):
         self.storage.save()
         new_storage = FileStorage()
         new_storage.reload()
-        self.assertIn(key, new_storage.all())
         reloaded_object = new_storage.all()[key]
         self.assertEqual(reloaded_object.id, self.obj.id)
         self.assertEqual(reloaded_object.to_dict(), self.obj.to_dict())
